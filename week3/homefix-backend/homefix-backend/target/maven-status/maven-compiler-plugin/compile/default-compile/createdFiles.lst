@@ -1,0 +1,14 @@
+com\homefix\controller\AuthController.class
+com\homefix\repository\EmailVerificationRepository.class
+com\homefix\model\User.class
+com\homefix\Helloworld.class
+com\homefix\repository\BookingRepository.class
+com\homefix\model\EmailVerification.class
+com\homefix\service\VerificationService.class
+com\homefix\repository\UserRepository.class
+com\homefix\service\EmailService.class
+com\homefix\HomefixBackendApplication.class
+com\homefix\model\Booking.class
+com\homefix\controller\BookingController.class
+com\homefix\controller\DashboardController.class
+com\homefix\service\AuthService.class

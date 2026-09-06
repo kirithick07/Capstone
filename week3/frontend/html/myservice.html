@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Services - HomeFix</title>
+
+    <link rel="stylesheet" href="../../frontend/css/myservice.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="topbar">
+            <h2>HomeFix</h2>
+
+            <a href="../html/dashboard.html">Dashboard</a>
+        </header>
+
+        <main class="content">
+
+            <div class="page-header">
+                <h1>My Services</h1>
+                <p>View your booked home services</p>
+            </div>
+
+            <div id="loading" class="message">
+                Loading services...
+            </div>
+
+            <div id="error" class="message error"></div>
+
+            <div id="servicesContainer" class="services-container">
+                <!-- Booking cards will appear here -->
+            </div>
+
+            <div id="noServices" class="message" style="display: none;">
+                You haven't booked any services yet.
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../myservice.js"></script>
+
+</body>
+</html>
+

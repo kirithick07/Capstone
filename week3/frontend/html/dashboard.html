@@ -1,0 +1,1176 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - HomeFix</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">HF</div>
+            <h2>HomeFix</h2>
+        </div>
+
+        <nav>
+
+            <a href="../html/dashboard.html" class="active">
+                🏠 Dashboard
+            </a>
+
+            <a href="../html/booking.html">
+                📅 Book Service
+            </a>
+
+            <a href="../html/myservice.html">
+                🔧 My Services
+            </a>
+
+            <a href="../html/appointment.html">
+                🗓️ Appointments
+            </a>
+
+            <a href="../html/profile.html">
+                👤 Profile
+            </a>
+
+        </nav>
+
+        <button class="logout-btn" onclick="logout()">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="top-header">
+
+            <div>
+                <h1>Welcome to HomeFix 👋</h1>
+
+                <p>
+                    Manage your home appliance services easily.
+                </p>
+            </div>
+
+            <a href="../html/booking.html" class="book-btn">
+                + Book Service
+            </a>
+
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📅
+                </div>
+
+                <div>
+                    <p>Total Bookings</p>
+                    <h2 id="totalBookings">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ⏳
+                </div>
+
+                <div>
+                    <p>Pending</p>
+                    <h2 id="pendingBookings">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ✅
+                </div>
+
+                <div>
+                    <p>Completed</p>
+                    <h2 id="completedBookings">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ❌
+                </div>
+
+                <div>
+                    <p>Cancelled</p>
+                    <h2 id="cancelledBookings">0</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Next Appointment -->
+        <section class="next-section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Next Appointment</h2>
+                    <p>Your upcoming HomeFix service</p>
+                </div>
+
+                <a href="../html/appointment.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div id="nextAppointment">
+
+                <div class="loading">
+                    Loading appointment...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recent Appointments -->
+        <section class="recent-section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Recent Appointments</h2>
+                    <p>Your latest service bookings</p>
+                </div>
+
+                <a href="../html/appointment.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div id="recentAppointments">
+
+                <div class="loading">
+                    Loading appointments...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../dashboard.js"></script>
+
+</body>
+</html>
+
+=======
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HomeFix - Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     ANIMATED BACKGROUND
+========================================= -->
+
+<div class="background-shape shape-one"></div>
+<div class="background-shape shape-two"></div>
+
+
+
+<!-- =========================================
+     DASHBOARD
+========================================= -->
+
+<div class="dashboard">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                🏠
+            </div>
+
+            <div>
+                <h2>HomeFix</h2>
+
+                <p>
+                    Home Appliance Care
+                </p>
+            </div>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+
+            <a
+                href="#"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+                    ▦
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    🔧
+                </span>
+
+                <span>
+                    My Services
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    📅
+                </span>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    🏠
+                </span>
+
+                <span>
+                    My Appliances
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    💳
+                </span>
+
+                <span>
+                    Payments
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⭐
+                </span>
+
+                <span>
+                    Reviews
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+
+            <a
+                href="login.html"
+                class="nav-item logout"
+            >
+
+                <span class="nav-icon">
+                    ↪
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================
+             TOP BAR
+        ================================== -->
+
+        <header class="topbar">
+
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+
+            <div class="page-title">
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Manage your home appliance services
+                </p>
+
+            </div>
+
+
+
+            <!-- TOP RIGHT -->
+
+            <div class="top-actions">
+
+
+                <!-- NOTIFICATION -->
+
+                <button
+                    class="notification-btn"
+                    id="notificationBtn"
+                >
+
+                    🔔
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- PROFILE -->
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        AK
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>
+                            Arun Kumar
+                        </strong>
+
+                        <span>
+                            Customer
+                        </span>
+
+                    </div>
+
+                    <span class="profile-arrow">
+                        ▾
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================
+             WELCOME BANNER
+        ================================== -->
+
+        <section class="welcome-section">
+
+
+            <div class="welcome-content">
+
+                <span class="welcome-label">
+                    WELCOME BACK 👋
+                </span>
+
+
+                <h2>
+                    Keep Your Home
+                    <span>Running Smoothly.</span>
+                </h2>
+
+
+                <p>
+                    Schedule a service, track your repairs,
+                    or manage your home appliances from one place.
+                </p>
+
+
+                <button
+                    class="primary-btn"
+                    id="bookServiceBtn"
+                >
+                   <a href="./booking.html" class="book-service-btn">
+    Book a Service
+</a>
+                </button>
+
+            </div>
+
+
+
+            <!-- ANIMATED APPLIANCE -->
+
+            <div class="welcome-illustration">
+
+                <div class="glow-circle"></div>
+
+                <div class="appliance-card">
+
+                    <div class="appliance-icon">
+                        🧺
+                    </div>
+
+                    <div class="appliance-status">
+                        ● Healthy
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             STATISTICS
+        ================================== -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    🔧
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Services
+                    </span>
+
+                    <h3
+                        class="counter"
+                        data-target="12"
+                    >
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    ✓
+                </div>
+
+                <div>
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <h3
+                        class="counter"
+                        data-target="9"
+                    >
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    📅
+                </div>
+
+                <div>
+
+                    <span>
+                        Upcoming
+                    </span>
+
+                    <h3
+                        class="counter"
+                        data-target="2"
+                    >
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    ⭐
+                </div>
+
+                <div>
+
+                    <span>
+                        Reviews
+                    </span>
+
+                    <h3
+                        class="counter"
+                        data-target="7"
+                    >
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             CONTENT GRID
+        ================================== -->
+
+        <section class="content-grid">
+
+
+            <!-- =================================
+                 ACTIVE SERVICE
+            ================================== -->
+
+            <div class="dashboard-card active-service">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-label">
+                            ACTIVE SERVICE
+                        </span>
+
+                        <h2>
+                            Washing Machine Repair
+                        </h2>
+
+                    </div>
+
+                    <span class="status-badge">
+                        In Progress
+                    </span>
+
+                </div>
+
+
+
+                <!-- TECHNICIAN -->
+
+                <div class="technician">
+
+                    <div class="technician-avatar">
+                        RS
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Rajesh Kumar
+                        </strong>
+
+                        <span>
+                            Senior Appliance Technician
+                        </span>
+
+                    </div>
+
+                    <button class="call-btn">
+                        ☎
+                    </button>
+
+                </div>
+
+
+
+                <!-- PROGRESS -->
+
+                <div class="service-progress">
+
+                    <div class="progress-label">
+
+                        <span>
+                            Service Progress
+                        </span>
+
+                        <strong>
+                            75%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width: 75%;"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="progress-steps">
+
+                        <span class="completed">
+                            ✓ Booked
+                        </span>
+
+                        <span class="completed">
+                            ✓ Assigned
+                        </span>
+
+                        <span class="completed">
+                            ✓ Technician Arrived
+                        </span>
+
+                        <span>
+                            Repair
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <button class="outline-btn">
+                    Track Service
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 UPCOMING APPOINTMENTS
+            ================================== -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-label">
+                            UPCOMING
+                        </span>
+
+                        <h2>
+                            Appointments
+                        </h2>
+
+                    </div>
+
+                    <a href="#">
+                        View All
+                    </a>
+
+                </div>
+
+
+
+                <!-- APPOINTMENT -->
+
+                <div class="appointment">
+
+                    <div class="date-box">
+
+                        <span>
+                            AUG
+                        </span>
+
+                        <strong>
+                            14
+                        </strong>
+
+                    </div>
+
+
+                    <div class="appointment-info">
+
+                        <strong>
+                            AC Maintenance
+                        </strong>
+
+                        <span>
+                            10:30 AM · Home Visit
+                        </span>
+
+                    </div>
+
+
+                    <span class="appointment-arrow">
+                        →
+                    </span>
+
+                </div>
+
+
+
+                <div class="appointment">
+
+                    <div class="date-box">
+
+                        <span>
+                            AUG
+                        </span>
+
+                        <strong>
+                            20
+                        </strong>
+
+                    </div>
+
+
+                    <div class="appointment-info">
+
+                        <strong>
+                            Refrigerator Service
+                        </strong>
+
+                        <span>
+                            02:00 PM · Home Visit
+                        </span>
+
+                    </div>
+
+
+                    <span class="appointment-arrow">
+                        →
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             BOTTOM GRID
+        ================================== -->
+
+        <section class="bottom-grid">
+
+
+            <!-- RECENT SERVICES -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-label">
+                            HISTORY
+                        </span>
+
+                        <h2>
+                            Recent Services
+                        </h2>
+
+                    </div>
+
+                    <a href="#">
+                        View All
+                    </a>
+
+                </div>
+
+
+
+                <div class="service-history">
+
+
+                    <div class="history-item">
+
+                        <div class="history-icon">
+                            ❄
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                AC Cleaning
+                            </strong>
+
+                            <span>
+                                Aug 02, 2026
+                            </span>
+
+                        </div>
+
+                        <span class="completed-badge">
+                            Completed
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="history-item">
+
+                        <div class="history-icon">
+                            📺
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                TV Installation
+                            </strong>
+
+                            <span>
+                                Jul 25, 2026
+                            </span>
+
+                        </div>
+
+                        <span class="completed-badge">
+                            Completed
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="history-item">
+
+                        <div class="history-icon">
+                            🧊
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Refrigerator Repair
+                            </strong>
+
+                            <span>
+                                Jul 14, 2026
+                            </span>
+
+                        </div>
+
+                        <span class="completed-badge">
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="dashboard-card quick-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-label">
+                            QUICK ACTIONS
+                        </span>
+
+                        <h2>
+                            What do you need?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="quick-actions">
+
+
+                    <button>
+
+                        <span>
+                            🔧
+                        </span>
+
+                        Repair
+
+                    </button>
+
+
+                    <button>
+
+                        <span>
+                            🛠
+                        </span>
+
+                        Maintenance
+
+                    </button>
+
+
+                    <button>
+
+                        <span>
+                            📦
+                        </span>
+
+                        Installation
+
+                    </button>
+
+
+                    <button>
+
+                        <span>
+                            💬
+                        </span>
+
+                        Support
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             SUPPORT BANNER
+        ================================== -->
+
+        <section class="support-banner">
+
+
+            <div class="support-icon">
+                💬
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Need help with an appliance?
+                </h3>
+
+                <p>
+                    Our support team is available to help you.
+                </p>
+
+            </div>
+
+
+            <button>
+                Contact Support
+            </button>
+
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                © 2026 HomeFix. Home Appliance Maintenance Platform.
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="../js/dashboard.js"></script>
+
+
+</body>
+
+</html>
+
+
