@@ -31,7 +31,7 @@ async function loadBookings() {
 
     try {
 
-        const response = await fetch(`${API_URL}/bookings`);
+        const response = await fetch(`${API_URL}/api/bookings`);
 
         if (!response.ok) {
             throw new Error("Failed to load bookings");
@@ -146,7 +146,7 @@ async function loadTechnicians(bookingId) {
 
     try {
 
-        const response = await fetch(`${API_URL}/technicians`);
+        const response = await fetch(`${API_URL}/api/technicians`);
 
         if (!response.ok) {
             throw new Error("Failed to load technicians");
@@ -196,7 +196,7 @@ async function assignTechnician(bookingId) {
     try {
 
         const response = await fetch(
-            `${API_URL}/bookings/${bookingId}/assign-technician/${technicianId}`,
+           `${API_URL}/api/bookings/${bookingId}/assign-technician/${technicianId}`,
             {
                 method: "PUT"
             }
