@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HomeFix Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+</head>
+
+<body>
+
+<header class="admin-header">
+
+    <div class="logo">
+        HomeFix
+    </div>
+
+    <div class="admin-info">
+        <span id="adminName">Admin</span>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <h1>Admin Dashboard</h1>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>Pending</h3>
+            <p id="pendingCount">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Assigned</h3>
+            <p id="assignedCount">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>In Progress</h3>
+            <p id="progressCount">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Completed</h3>
+            <p id="completedCount">0</p>
+        </div>
+
+    </div>
+
+
+    <section class="booking-section">
+
+        <h2>Bookings</h2>
+
+        <div id="bookingContainer">
+            <p>Loading bookings...</p>
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../admin-dashboard.js"></script>
+
+</body>
+</html>
