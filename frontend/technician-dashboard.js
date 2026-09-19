@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api";
+const API_URL = "https://homefix-backend-2q2l.onrender.com/api";
 
 // Temporary technician ID for testing
 // Ravi Kumar = ID 2

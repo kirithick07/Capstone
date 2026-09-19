@@ -22,7 +22,7 @@ document
         try {
 
             const response = await fetch(
-                "http://localhost:8080/api/auth/forgot-password",
+                "https://homefix-backend-2q2l.onrender.com/api/auth/forgot-password",
                 {
                     method: "POST",
 

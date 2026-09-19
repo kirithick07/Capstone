@@ -54,7 +54,7 @@ form.addEventListener("submit", async function (event) {
     try {
 
         const response = await fetch(
-            "http://localhost:8080/api/auth/reset-password",
+            "https://homefix-backend-2q2l.onrender.com/api/auth/reset-password",
             {
                 method: "POST",
 

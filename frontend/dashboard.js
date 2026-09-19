@@ -2,7 +2,7 @@
 // HOMEFIX DASHBOARD
 // ==========================================
 
-const API_URL = "http://localhost:8080/api/bookings";
+const API_URL = "https://homefix-backend-2q2l.onrender.com/api/bookings";
 
 let bookings = [];
 

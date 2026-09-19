@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080";
+const API_URL = "https://homefix-backend-2q2l.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
     loadBookings();

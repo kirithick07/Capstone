@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/users";
+const API_URL = "https://homefix-backend-2q2l.onrender.com/api/users";
 
 document.addEventListener("DOMContentLoaded", function () {
     loadProfile();

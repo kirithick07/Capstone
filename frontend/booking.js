@@ -595,7 +595,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const response =
                     await fetch(
-                        "http://localhost:8080/api/bookings",
+                        "https://homefix-backend-2q2l.onrender.com/api/bookings",
                         {
                             method: "POST",
 
@@ -751,4 +751,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
 

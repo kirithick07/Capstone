@@ -303,7 +303,7 @@ form.addEventListener(
 
             const response =
                 await fetch(
-                    "http://localhost:8080/api/auth/register",
+                    "https://homefix-backend-2q2l.onrender.com/api/auth/register",
                     {
                         method: "POST",
 
@@ -443,7 +443,7 @@ verifyOtpButton.addEventListener(
 
             const response =
                 await fetch(
-                    "http://localhost:8080/api/auth/verify-code",
+                    "https://homefix-backend-2q2l.onrender.com/api/auth/verify-code",
                     {
                         method: "POST",
 
@@ -579,7 +579,7 @@ resendOtpButton.addEventListener(
 
             const response =
                 await fetch(
-                    "http://localhost:8080/api/auth/send-code",
+                    "https://homefix-backend-2q2l.onrender.com/api/auth/send-code",
                     {
                         method: "POST",
 
@@ -666,4 +666,5 @@ resendOtpButton.addEventListener(
 
     }
 );
+
 
