@@ -50,14 +50,13 @@ togglePassword.addEventListener("click", function () {
     if (password.type === "password") {
 
         password.type = "text";
-
         togglePassword.textContent = "🙈";
 
     } else {
 
         password.type = "password";
-
         togglePassword.textContent = "👁";
+
     }
 
 });
@@ -74,14 +73,13 @@ toggleConfirmPassword.addEventListener(
         if (confirmPassword.type === "password") {
 
             confirmPassword.type = "text";
-
             toggleConfirmPassword.textContent = "🙈";
 
         } else {
 
             confirmPassword.type = "password";
-
             toggleConfirmPassword.textContent = "👁";
+
         }
 
     }
@@ -122,6 +120,10 @@ form.addEventListener(
 
         event.preventDefault();
 
+
+        // =====================================
+        // GET FORM VALUES
+        // =====================================
 
         const fullname =
             document
@@ -271,6 +273,26 @@ form.addEventListener(
 
 
         // =====================================
+        // DISABLE SUBMIT BUTTON
+        // =====================================
+
+        const submitButton =
+            form.querySelector(
+                'button[type="submit"]'
+            );
+
+
+        if (submitButton) {
+
+            submitButton.disabled = true;
+
+            submitButton.textContent =
+                "Sending OTP...";
+
+        }
+
+
+        // =====================================
         // USER DATA
         // =====================================
 
@@ -331,7 +353,20 @@ form.addEventListener(
                     errorText ||
                     "Registration failed.";
 
-                message.style.color = "red";
+                message.style.color =
+                    "red";
+
+
+                // Re-enable button
+                if (submitButton) {
+
+                    submitButton.disabled =
+                        false;
+
+                    submitButton.textContent =
+                        "Create Account";
+
+                }
 
                 return;
             }
@@ -343,6 +378,7 @@ form.addEventListener(
 
             const data =
                 await response.json();
+
 
             console.log(
                 "Registration response:",
@@ -357,15 +393,18 @@ form.addEventListener(
             message.textContent =
                 "OTP sent to your email.";
 
-            message.style.color = "green";
+            message.style.color =
+                "green";
 
 
             // Hide registration form
-            form.style.display = "none";
+            form.style.display =
+                "none";
 
 
             // Show OTP section
-            otpSection.style.display = "block";
+            otpSection.style.display =
+                "block";
 
 
             // Clear OTP field
@@ -374,7 +413,6 @@ form.addEventListener(
 
             // Focus OTP field
             otpInput.focus();
-
 
         } catch (error) {
 
@@ -387,7 +425,21 @@ form.addEventListener(
             message.textContent =
                 "Cannot connect to the backend.";
 
-            message.style.color = "red";
+            message.style.color =
+                "red";
+
+
+            // Re-enable button
+            if (submitButton) {
+
+                submitButton.disabled =
+                    false;
+
+                submitButton.textContent =
+                    "Create Account";
+
+            }
+
         }
 
     }
@@ -415,7 +467,8 @@ verifyOtpButton.addEventListener(
             otpMessage.textContent =
                 "Enter the 6-digit OTP.";
 
-            otpMessage.style.color = "red";
+            otpMessage.style.color =
+                "red";
 
             return;
         }
@@ -426,14 +479,16 @@ verifyOtpButton.addEventListener(
             otpMessage.textContent =
                 "Registration email not found.";
 
-            otpMessage.style.color = "red";
+            otpMessage.style.color =
+                "red";
 
             return;
         }
 
 
         // Disable button
-        verifyOtpButton.disabled = true;
+        verifyOtpButton.disabled =
+            true;
 
         verifyOtpButton.textContent =
             "Verifying...";
@@ -454,8 +509,10 @@ verifyOtpButton.addEventListener(
 
                         body:
                             JSON.stringify({
-                                email: registeredEmail,
-                                code: code
+                                email:
+                                    registeredEmail,
+                                code:
+                                    code
                             })
                     }
                 );
@@ -478,6 +535,7 @@ verifyOtpButton.addEventListener(
                 otpMessage.style.color =
                     "red";
 
+
                 verifyOtpButton.disabled =
                     false;
 
@@ -492,36 +550,37 @@ verifyOtpButton.addEventListener(
             // SUCCESS
             // =================================
 
-           // =================================
-// SUCCESS
-// =================================
+            otpMessage.textContent =
+                "Account created successfully!";
 
-otpMessage.textContent =
-    "Account created successfully!";
+            otpMessage.style.color =
+                "green";
 
-otpMessage.style.color =
-    "green";
 
-verifyOtpButton.textContent =
-    "Verified";
+            verifyOtpButton.textContent =
+                "Verified";
 
-// =================================
-// CLEAR OLD LOGIN SESSION
-// =================================
 
-localStorage.removeItem("userId");
-localStorage.removeItem("username");
-localStorage.removeItem("email");
-localStorage.removeItem("name");
+            // =================================
+            // CLEAR OLD LOGIN SESSION
+            // =================================
 
-// Redirect to login
-setTimeout(function () {
+            localStorage.removeItem("userId");
+            localStorage.removeItem("username");
+            localStorage.removeItem("email");
+            localStorage.removeItem("name");
 
-    window.location.href =
-        "login.html";
 
-}, 1500);
+            // =================================
+            // REDIRECT TO LOGIN
+            // =================================
 
+            setTimeout(function () {
+
+                window.location.href =
+                    "login.html";
+
+            }, 1500);
 
         } catch (error) {
 
@@ -543,6 +602,7 @@ setTimeout(function () {
 
             verifyOtpButton.textContent =
                 "Verify OTP";
+
         }
 
     }
@@ -569,7 +629,8 @@ resendOtpButton.addEventListener(
         }
 
 
-        resendOtpButton.disabled = true;
+        resendOtpButton.disabled =
+            true;
 
         resendOtpButton.textContent =
             "Sending...";
@@ -590,7 +651,8 @@ resendOtpButton.addEventListener(
 
                         body:
                             JSON.stringify({
-                                email: registeredEmail
+                                email:
+                                    registeredEmail
                             })
                     }
                 );
@@ -608,6 +670,7 @@ resendOtpButton.addEventListener(
 
                 otpMessage.style.color =
                     "red";
+
 
                 resendOtpButton.disabled =
                     false;
@@ -641,7 +704,6 @@ resendOtpButton.addEventListener(
             resendOtpButton.textContent =
                 "Resend OTP";
 
-
         } catch (error) {
 
             console.error(
@@ -662,9 +724,9 @@ resendOtpButton.addEventListener(
 
             resendOtpButton.textContent =
                 "Resend OTP";
+
         }
 
     }
 );
-
 
