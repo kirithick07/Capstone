@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - HomeFix</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="Icon" href="../../image/homefix-logo.png">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">HF</div>
+            <h2>HomeFix</h2>
+        </div>
+
+        <nav>
+
+            <a href="../html/dashboard.html" class="active">
+                🏠 Dashboard
+            </a>
+
+            <a href="../html/booking.html">
+                📅 Book Service
+            </a>
+
+            <a href="../html/myservice.html">
+                🔧 My Services
+            </a>
+
+            <a href="../html/appointment.html">
+                🗓️ Appointments
+            </a>
+
+            <a href="../html/profile.html">
+                👤 Profile
+            </a>
+
+        </nav>
+
+        <button class="logout-btn" onclick="logout()">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="top-header">
+
+            <div>
+                <h1>Welcome to HomeFix 👋</h1>
+
+                <p>
+                    Manage your home appliance services easily.
+                </p>
+            </div>
+
+            <a href="../html/booking.html" class="book-btn">
+                + Book Service
+            </a>
+
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📅
+                </div>
+
+                <div>
+                    <p>Total Bookings</p>
+                    <h2 id="totalBookings">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ⏳
+                </div>
+
+                <div>
+                    <p>Pending</p>
+                    <h2 id="pendingBookings">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ✅
+                </div>
+
+                <div>
+                    <p>Completed</p>
+                    <h2 id="completedBookings">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ❌
+                </div>
+
+                <div>
+                    <p>Cancelled</p>
+                    <h2 id="cancelledBookings">0</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Next Appointment -->
+        <section class="next-section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Next Appointment</h2>
+                    <p>Your upcoming HomeFix service</p>
+                </div>
+
+                <a href="../html/appointment.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div id="nextAppointment">
+
+                <div class="loading">
+                    Loading appointment...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recent Appointments -->
+        <section class="recent-section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Recent Appointments</h2>
+                    <p>Your latest service bookings</p>
+                </div>
+
+                <a href="../html/appointment.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div id="recentAppointments">
+
+                <div class="loading">
+                    Loading appointments...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../dashboard.js"></script>
+
+</body>
+</html>
+

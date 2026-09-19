@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Technician Dashboard - HomeFix</title>
+
+    <link rel="stylesheet" href="../css/technician-dashboard.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>HF</span>
+        <div>
+            <strong>HomeFix</strong>
+            <small>Technician Panel</small>
+        </div>
+    </div>
+
+    <button id="logoutBtn">Logout</button>
+
+</header>
+
+
+<main class="container">
+
+    <section class="welcome">
+        <h1>Technician Dashboard</h1>
+        <p id="technicianInfo">Loading technician information...</p>
+    </section>
+
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <span>Assigned Services</span>
+            <strong id="totalServices">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Pending</span>
+            <strong id="pendingServices">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Completed</span>
+            <strong id="completedServices">0</strong>
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>My Assigned Services</h2>
+
+        <div id="bookingContainer">
+            <p class="loading">Loading services...</p>
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../technician-dashboard.js"></script>
+
+</body>
+</html>

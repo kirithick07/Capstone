@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* ==============================
+   NAVBAR
+================================ */
+
+.navbar {
+    min-height: 75px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 6%;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.logo-circle {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+.logo h2 {
+    font-size: 20px;
+}
+
+
+.logo span {
+    font-size: 11px;
+    color: #777;
+}
+
+
+/* ==============================
+   NAVIGATION
+================================ */
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+
+nav a:hover,
+nav a.active {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   MAIN
+================================ */
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: 40px auto;
+}
+
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+
+.page-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+
+.page-header p {
+    color: #777;
+}
+
+
+/* ==============================
+   FILTERS
+================================ */
+
+.filters {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+.filter {
+    border: 1px solid #ddd;
+
+    background: white;
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.filter:hover {
+    border-color: #2563eb;
+}
+
+
+.filter.active {
+    background: #2563eb;
+    color: white;
+
+    border-color: #2563eb;
+}
+
+
+/* ==============================
+   SERVICE CARD
+================================ */
+
+.service-card {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: 0.2s;
+}
+
+
+.service-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ==============================
+   SERVICE TOP
+================================ */
+
+.service-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    border-bottom: 1px solid #eee;
+
+    padding-bottom: 20px;
+}
+
+
+.service-top h2 {
+    font-size: 20px;
+
+    margin-bottom: 6px;
+}
+
+
+.appliance {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   STATUS
+================================ */
+
+.status {
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* Pending */
+
+.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+
+/* Technician Assigned */
+
+.assigned {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+
+/* Service In Progress */
+
+.progress {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+
+/* Completed */
+
+.completed {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+
+/* Cancelled */
+
+.cancelled {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+
+/* ==============================
+   INFORMATION
+================================ */
+
+.service-info {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding: 25px 0;
+}
+
+
+.info-box {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.info-box span {
+    font-size: 12px;
+
+    color: #888;
+}
+
+
+.info-box strong {
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+
+/* ==============================
+   PAYMENT
+================================ */
+
+.paid {
+    color: #16a34a;
+}
+
+
+.payment-pending {
+    color: #d97706;
+}
+
+
+.payment-failed {
+    color: #dc2626;
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+.service-footer {
+    border-top: 1px solid #eee;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.service-footer span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+.details-btn {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.details-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==============================
+   LOADING
+================================ */
+
+.loading {
+    text-align: center;
+
+    background: white;
+
+    padding: 50px 20px;
+
+    border-radius: 14px;
+
+    color: #666;
+}
+
+
+.loading div {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+
+.loading h3 {
+    margin-bottom: 8px;
+}
+
+
+.loading p {
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   ERROR
+================================ */
+
+.error-message {
+    text-align: center;
+
+    background: white;
+
+    padding: 50px 20px;
+
+    border-radius: 14px;
+
+    color: #666;
+}
+
+
+.error-message h3 {
+    margin-bottom: 8px;
+
+    color: #dc2626;
+}
+
+
+.error-message p {
+    font-size: 14px;
+}
+
+
+/* ==============================
+   NO SERVICES
+================================ */
+
+.no-services {
+    display: none;
+
+    text-align: center;
+
+    background: white;
+
+    padding: 60px 20px;
+
+    border-radius: 14px;
+}
+
+
+.no-services div {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.no-services h2 {
+    margin-bottom: 8px;
+}
+
+
+.no-services p {
+    color: #777;
+}
+
+
+/* ==============================
+   CANCELLED TEXT
+================================ */
+
+.cancelled-text {
+    color: #dc2626 !important;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   COMPLETED TEXT
+================================ */
+
+.completed-text {
+    color: #16a34a !important;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   ASSIGNED TEXT
+================================ */
+
+.assigned-text {
+    color: #4338ca !important;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   IN PROGRESS TEXT
+================================ */
+
+.progress-text {
+    color: #2563eb !important;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+
+    .container {
+        width: 94%;
+
+        margin-top: 25px;
+    }
+
+
+    .service-top {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .service-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .service-footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .service-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    .page-header h1 {
+        font-size: 26px;
+    }
+
+
+    .filter {
+        padding: 9px 14px;
+
+        font-size: 13px;
+    }
+}

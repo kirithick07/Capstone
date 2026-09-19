@@ -1,0 +1,343 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f4f7fb;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+.register-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.register-box {
+    width: 100%;
+    max-width: 450px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    display: block;
+
+    width: 80px;
+    height: 80px;
+
+    object-fit: contain;
+
+    margin: 0 auto 10px;
+}
+
+.register-box h1 {
+    text-align: center;
+
+    color: #2563eb;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.register-box h2 {
+    text-align: center;
+
+    color: #222;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #333;
+
+    margin-bottom: 7px;
+}
+
+.input-group input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: #fff;
+
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #999;
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 50px;
+}
+
+.toggle-password {
+    position: absolute;
+
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    padding: 5px;
+}
+
+
+/* =========================
+   TERMS
+========================= */
+
+.terms {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 5px 0 18px;
+}
+
+.terms input {
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+}
+
+.terms label {
+    font-size: 13px;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.register-message {
+    text-align: center;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+    min-height: 18px;
+}
+
+
+/* =========================
+   REGISTER BUTTON
+========================= */
+
+.register-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.register-button:hover {
+    background: #1d4ed8;
+}
+
+.register-button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   LOGIN LINK
+========================= */
+
+.login-link {
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    color: #666;
+}
+
+.login-link a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ================= OTP SECTION ================= */
+
+#otpSection {
+    margin-top: 20px;
+}
+
+#otpSection h2 {
+    margin-bottom: 8px;
+}
+
+#otpSection .subtitle {
+    margin-bottom: 20px;
+}
+
+/* OTP input */
+#otp {
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* OTP buttons */
+#verifyOtpButton,
+#resendOtpButton {
+    width: 100%;
+}
+
+/* OTP message */
+#otpMessage {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Prevent OTP input from accepting unnecessary characters */
+#otp {
+    -moz-appearance: textfield;
+}
+
+#otp::-webkit-outer-spin-button,
+#otp::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .register-box {
+        padding: 25px 20px;
+    }
+
+    .register-box h1 {
+        font-size: 26px;
+    }
+
+    .register-box h2 {
+        font-size: 21px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+}

@@ -1,0 +1,866 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HomeFix - Book a Service</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/booking.css"
+        
+    >
+    <link rel="Icon" href="../../image/homefix-logo.png">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     BACKGROUND ANIMATION
+========================================= -->
+
+<div class="bg-circle circle-one"></div>
+<div class="bg-circle circle-two"></div>
+
+
+
+<!-- =========================================
+     PAGE
+========================================= -->
+
+<div class="booking-page">
+
+
+    <!-- =====================================
+         TOP HEADER
+    ====================================== -->
+
+    <header class="booking-header">
+
+        <a
+            href="dashboard.html"
+            class="back-btn"
+        >
+            ← Dashboard
+        </a>
+
+
+        <div class="booking-logo">
+
+            <div class="logo-icon">
+                <img class="logo-icon-image" src="../../image/homefix-logo.png" alt="HomeFix">
+            </div>
+
+            <div>
+
+                <h1>HomeFix</h1>
+
+                <p>
+                    Home Appliance Maintenance
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="secure-text">
+            🔒 Secure Booking
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         MAIN
+    ====================================== -->
+
+    <main class="booking-main">
+
+
+        <!-- =================================
+             PAGE TITLE
+        ================================== -->
+
+        <div class="page-heading">
+
+            <span>
+                HOME SERVICE
+            </span>
+
+            <h2>
+                Book a Service
+            </h2>
+
+            <p>
+                Tell us what you need and our
+                professionals will take care of the rest.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================
+             BOOKING CONTENT
+        ================================== -->
+
+        <div class="booking-layout">
+
+
+            <!-- =================================
+                 FORM
+            ================================== -->
+
+            <section class="booking-card">
+
+
+                <!-- PROGRESS -->
+
+                <div class="booking-progress">
+
+                    <div class="step active">
+                        <span>1</span>
+                        <p>Service</p>
+                    </div>
+
+                    <div class="progress-line"></div>
+
+                    <div class="step">
+                        <span>2</span>
+                        <p>Schedule</p>
+                    </div>
+
+                    <div class="progress-line"></div>
+
+                    <div class="step">
+                        <span>3</span>
+                        <p>Confirm</p>
+                    </div>
+
+                </div>
+
+
+
+                <form id="bookingForm">
+
+
+                    <!-- =================================
+                         APPLIANCE
+                    ================================== -->
+
+                    <div class="form-section">
+
+                        <div class="section-title">
+
+                            <span>
+                                01
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Select Appliance
+                                </h3>
+
+                                <p>
+                                    Which appliance needs service?
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="appliance-grid">
+
+
+                            <label class="appliance-option">
+
+                                <input
+                                    type="radio"
+                                    name="appliance"
+                                    value="AC"
+                                    required
+                                >
+
+                                <div class="appliance-content">
+
+                                    <span class="appliance-emoji">
+                                        ❄️
+                                    </span>
+
+                                    <strong>
+                                        Air Conditioner
+                                    </strong>
+
+                                </div>
+
+                            </label>
+
+
+
+                            <label class="appliance-option">
+
+                                <input
+                                    type="radio"
+                                    name="appliance"
+                                    value="Washing Machine"
+                                >
+
+                                <div class="appliance-content">
+
+                                    <span class="appliance-emoji">
+                                        🧺
+                                    </span>
+
+                                    <strong>
+                                        Washing Machine
+                                    </strong>
+
+                                </div>
+
+                            </label>
+
+
+
+                            <label class="appliance-option">
+
+                                <input
+                                    type="radio"
+                                    name="appliance"
+                                    value="Refrigerator"
+                                >
+
+                                <div class="appliance-content">
+
+                                    <span class="appliance-emoji">
+                                        🧊
+                                    </span>
+
+                                    <strong>
+                                        Refrigerator
+                                    </strong>
+
+                                </div>
+
+                            </label>
+
+
+
+                            <label class="appliance-option">
+
+                                <input
+                                    type="radio"
+                                    name="appliance"
+                                    value="Television"
+                                >
+
+                                <div class="appliance-content">
+
+                                    <span class="appliance-emoji">
+                                        📺
+                                    </span>
+
+                                    <strong>
+                                        Television
+                                    </strong>
+
+                                </div>
+
+                            </label>
+
+
+
+                            <label class="appliance-option">
+
+                                <input
+                                    type="radio"
+                                    name="appliance"
+                                    value="Microwave"
+                                >
+
+                                <div class="appliance-content">
+
+                                    <span class="appliance-emoji">
+                                        🍽️
+                                    </span>
+
+                                    <strong>
+                                        Microwave
+                                    </strong>
+
+                                </div>
+
+                            </label>
+
+
+
+                            <label class="appliance-option">
+
+                                <input
+                                    type="radio"
+                                    name="appliance"
+                                    value="Other"
+                                >
+
+                                <div class="appliance-content">
+
+                                    <span class="appliance-emoji">
+                                        ⚡
+                                    </span>
+
+                                    <strong>
+                                        Other
+                                    </strong>
+
+                                </div>
+
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         SERVICE TYPE
+                    ================================== -->
+
+                    <div class="form-section">
+
+                        <div class="section-title">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Service Type
+                                </h3>
+
+                                <p>
+                                    Choose the service you need.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-select">
+
+                            <select
+                                id="serviceType"
+                                required
+                            >
+
+                                <option value="">
+                                    Select service type
+                                </option>
+
+                                <option
+                                    value="Repair"
+                                    data-price="499"
+                                >
+                                    🔧 Repair
+                                </option>
+
+                                <option
+                                    value="Maintenance"
+                                    data-price="399"
+                                >
+                                    🛠 Maintenance
+                                </option>
+
+                                <option
+                                    value="Installation"
+                                    data-price="599"
+                                >
+                                    📦 Installation
+                                </option>
+
+                                <option
+                                    value="Inspection"
+                                    data-price="299"
+                                >
+                                    🔍 Inspection
+                                </option>
+
+                                <option
+                                    value="Cleaning"
+                                    data-price="349"
+                                >
+                                    ✨ Cleaning
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         DATE AND TIME
+                    ================================== -->
+
+                    <div class="form-section">
+
+                        <div class="section-title">
+
+                            <span>
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Schedule Visit
+                                </h3>
+
+                                <p>
+                                    Select your preferred date and time.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="date-time-grid">
+
+                            <div class="input-field">
+
+                                <label for="serviceDate">
+                                    Service Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="serviceDate"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="input-field">
+
+                                <label for="serviceTime">
+                                    Preferred Time
+                                </label>
+
+                                <select
+                                    id="serviceTime"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select time
+                                    </option>
+
+                                    <option>
+                                        09:00 AM - 11:00 AM
+                                    </option>
+
+                                    <option>
+                                        11:00 AM - 01:00 PM
+                                    </option>
+
+                                    <option>
+                                        02:00 PM - 04:00 PM
+                                    </option>
+
+                                    <option>
+                                        04:00 PM - 06:00 PM
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         ADDRESS
+                    ================================== -->
+
+                    <div class="form-section">
+
+                        <div class="section-title">
+
+                            <span>
+                                04
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Service Address
+                                </h3>
+
+                                <p>
+                                    Where should our technician visit?
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="address-grid">
+
+
+                            <div class="input-field">
+
+                                <label for="address">
+                                    House / Street Address
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="address"
+                                    placeholder="Enter your address"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="input-row">
+
+
+                                <div class="input-field">
+
+                                    <label for="city">
+                                        City
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="city"
+                                        placeholder="City"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="input-field">
+
+                                    <label for="pincode">
+                                        PIN Code
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="pincode"
+                                        placeholder="600001"
+                                        maxlength="6"
+                                        required
+                                    >
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         PROBLEM DESCRIPTION
+                    ================================== -->
+
+                    <div class="form-section">
+
+                        <div class="section-title">
+
+                            <span>
+                                05
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Describe the Problem
+                                </h3>
+
+                                <p>
+                                    Help our technician understand the issue.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <textarea
+                            id="problem"
+                            rows="4"
+                            placeholder="Example: Washing machine is making unusual noise..."
+                        ></textarea>
+
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         SUBMIT
+                    ================================== -->
+
+                    <button
+                        type="submit"
+                        class="book-btn"
+                    >
+
+                        <span>
+                            Confirm & Book Service
+                        </span>
+
+                        <strong>
+                            →
+                        </strong>
+
+                    </button>
+
+
+                    <p
+                        id="bookingMessage"
+                        class="booking-message"
+                    ></p>
+
+
+                </form>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 SUMMARY
+            ================================== -->
+
+            <aside class="summary-card">
+
+
+                <div class="summary-top">
+
+                    <span>
+                        BOOKING SUMMARY
+                    </span>
+
+                    <div class="summary-icon">
+                        🏠
+                    </div>
+
+                </div>
+
+
+                <h2>
+                    Your Service
+                </h2>
+
+
+                <div class="summary-details">
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Appliance
+                        </span>
+
+                        <strong id="summaryAppliance">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Service
+                        </span>
+
+                        <strong id="summaryService">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Date
+                        </span>
+
+                        <strong id="summaryDate">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Time
+                        </span>
+
+                        <strong id="summaryTime">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="price-box">
+
+                    <span>
+                        Estimated Starting Price
+                    </span>
+
+                    <strong>
+                        ₹<span id="price">0</span>
+                    </strong>
+
+                    <small>
+                        Final price may vary after inspection.
+                    </small>
+
+                </div>
+
+
+
+                <div class="trust-list">
+
+                    <div>
+                        ✓ Verified Technicians
+                    </div>
+
+                    <div>
+                        ✓ Transparent Pricing
+                    </div>
+
+                    <div>
+                        ✓ Doorstep Service
+                    </div>
+
+                    <div>
+                        ✓ Service Warranty
+                    </div>
+
+                </div>
+
+
+
+                <div class="help-box">
+
+                    <span>
+                        💬
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Need help?
+                        </strong>
+
+                        <p>
+                            Contact HomeFix Support
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================
+         SUCCESS POPUP
+    ====================================== -->
+
+    <div
+        class="success-overlay"
+        id="successOverlay"
+    >
+
+        <div class="success-box">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Booking Confirmed!
+            </h2>
+
+            <p>
+                Your HomeFix service has been successfully booked.
+            </p>
+
+            <span id="bookingId">
+                Booking ID: HF0001
+            </span>
+
+            <button
+                id="successDashboardBtn"
+            >
+                Go to Dashboard
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+<script src="../booking.js"></script>
+
+</body>
+
+</html>

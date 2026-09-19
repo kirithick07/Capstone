@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Services - HomeFix</title>
+
+    <link rel="stylesheet" href="../css/myservice.css">
+    <link rel="icon" type="image/png" href="../../image/homefix-logo.png">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <div class="logo-circle">HF</div>
+
+        <div>
+            <h2>HomeFix</h2>
+            <span>Home Appliance Services</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="dashboard.html">🏠 Dashboard</a>
+        <a href="booking.html">📅 Book Service</a>
+        <a href="myservice.html" class="active">🔧 My Services</a>
+        <a href="appointment.html">🗓️ Appointments</a>
+        <a href="profile.html">👤 Profile</a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <div class="page-header">
+        <h1>My Services</h1>
+
+        <p>
+            View your service history, technician visits and payments.
+        </p>
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="filters">
+
+        <button class="filter active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter" data-filter="Pending">
+            Pending
+        </button>
+
+        <button class="filter" data-filter="Technician Assigned">
+            Technician Assigned
+        </button>
+
+        <button class="filter" data-filter="Service In Progress">
+            In Progress
+        </button>
+
+        <button class="filter" data-filter="Completed">
+            Completed
+        </button>
+
+        <button class="filter" data-filter="Cancelled">
+            Cancelled
+        </button>
+
+    </div>
+
+
+    <!-- SERVICE LIST -->
+
+    <div id="servicesContainer">
+
+        <!--
+            Service cards will be loaded dynamically
+            from Spring Boot / MySQL using myservice.js.
+        -->
+
+        <div class="loading">
+
+            <div>🔄</div>
+
+            <h3>Loading Services...</h3>
+
+            <p>
+                Please wait while we load your service details.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- NO SERVICES -->
+
+    <div id="noServices" class="no-services">
+
+        <div>🔧</div>
+
+        <h2>No Services Found</h2>
+
+        <p>
+            You don't have any services in this category.
+        </p>
+
+    </div>
+
+</main>
+
+
+<!-- IMPORTANT:
+     myservice.js is inside frontend/js
+-->
+
+<script src="../myservice.js"></script>
+
+</body>
+</html>

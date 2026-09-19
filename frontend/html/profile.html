@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HomeFix - My Profile</title>
+
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="Icon" href="../../image/homefix-logo.png">
+</head>
+
+<body>
+
+<div class="profile-container">
+
+    <div class="profile-card">
+
+        <div class="profile-header">
+            <div class="profile-avatar" id="profileAvatar">
+                U
+            </div>
+
+            <div>
+                <h1 id="profileName">Loading...</h1>
+                <p id="profileUsername">@username</p>
+            </div>
+        </div>
+
+        <div class="profile-body">
+
+            <h2>Personal Information</h2>
+
+            <div class="info-grid">
+
+                <div class="info-box">
+                    <label>Full Name</label>
+                    <p id="name">Loading...</p>
+                </div>
+
+                <div class="info-box">
+                    <label>Username</label>
+                    <p id="username">Loading...</p>
+                </div>
+
+                <div class="info-box">
+                    <label>Email</label>
+                    <p id="email">Loading...</p>
+                </div>
+
+                <div class="info-box">
+                    <label>Phone</label>
+                    <p id="phone">Loading...</p>
+                </div>
+
+            </div>
+
+            <div class="button-section">
+                <button onclick="goBack()">Back</button>
+                <button class="edit-btn" onclick="editProfile()">
+                    Edit Profile
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../profile.js"></script>
+
+</body>
+</html>
