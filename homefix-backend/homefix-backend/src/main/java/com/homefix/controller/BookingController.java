@@ -200,17 +200,21 @@ public class BookingController {
         Booking booking =
                 bookingOptional.get();
 
-        booking.setTechnicianName(
-                technician.getName()
-        );
+       booking.setTechnicianId(
+        technician.getId()
+);
 
-        booking.setTechnicianPhone(
-                technician.getPhone()
-        );
+booking.setTechnicianName(
+        technician.getName()
+);
 
-        booking.setStatus(
-                "Technician Assigned"
-        );
+booking.setTechnicianPhone(
+        technician.getPhone()
+);
+
+booking.setStatus(
+        "Technician Assigned"
+);
 
         // Technician becomes unavailable
         technician.setAvailable(false);
@@ -243,9 +247,9 @@ public class BookingController {
                 technicianOptional.get();
 
         List<Booking> bookings =
-                bookingRepository.findByTechnicianName(
-                        technician.getName()
-                );
+        bookingRepository.findByTechnicianId(
+                technicianId
+        );
 
         return ResponseEntity.ok(bookings);
     }

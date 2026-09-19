@@ -25,6 +25,8 @@ public class Booking {
 
     private String technicianPhone;
 
+    private Long technicianId;
+
     // Actual technician visit time
     private String visitedStartTime;
 
@@ -167,6 +169,19 @@ public class Booking {
     public void setVisitedStartTime(String visitedStartTime) {
         this.visitedStartTime = visitedStartTime;
     }
+
+
+    // ==========================================
+// TECHNICIAN ID
+// ==========================================
+
+public Long getTechnicianId() {
+    return technicianId;
+}
+
+public void setTechnicianId(Long technicianId) {
+    this.technicianId = technicianId;
+}
 
 
     // ==========================================
