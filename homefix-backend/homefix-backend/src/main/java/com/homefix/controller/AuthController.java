@@ -50,9 +50,10 @@ public class AuthController {
     // REGISTER
     // =========================================
 
-    @PostMapping("/register")
-    public ResponseEntity<?> register(
-            @RequestBody User user) {
+  @PostMapping("/register")
+@Transactional
+public ResponseEntity<?> register(
+        @RequestBody User user) {
 
         try {
 
@@ -79,7 +80,7 @@ public class AuthController {
 
 
             // Remove previous pending registration
-           authService.deletePendingRegistrationByEmail(
+          pendingRegistrationRepository.deleteByEmail(
         user.getEmail()
 );
 

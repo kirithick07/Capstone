@@ -1,6 +1,5 @@
 package com.homefix.service;
 
-import com.homefix.model.PendingRegistration;
 import com.homefix.repository.PendingRegistrationRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +15,6 @@ public class AuthService {
     @Transactional
     public void deletePendingRegistrationByEmail(String email) {
 
-        PendingRegistration pending =
-                pendingRegistrationRepository
-                        .findByEmail(email)
-                        .orElse(null);
-
-        if (pending != null) {
-            pendingRegistrationRepository.delete(pending);
-        }
+        pendingRegistrationRepository.deleteByEmail(email);
     }
 }
