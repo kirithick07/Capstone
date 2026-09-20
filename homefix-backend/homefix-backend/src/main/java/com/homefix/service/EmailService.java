@@ -1,36 +1,80 @@
+
 package com.homefix.service;
 
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
+
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 @Service
 public class EmailService {
 
-    private final JavaMailSender mailSender;
+    private final HttpClient httpClient = HttpClient.newHttpClient();
 
-    public EmailService(JavaMailSender mailSender) {
-        this.mailSender = mailSender;
-    }
+    private final String resendApiKey =
+            System.getenv("RESEND_API_KEY");
 
     private void sendEmail(
             String to,
             String subject,
             String text) {
 
+        if (resendApiKey == null || resendApiKey.isBlank()) {
+            throw new RuntimeException(
+                    "RESEND_API_KEY is not configured"
+            );
+        }
+
+        String json =
+                "{"
+                + "\"from\":\"HomeFix <onboarding@resend.dev>\","
+                + "\"to\":[\"" + escapeJson(to) + "\"],"
+                + "\"subject\":\"" + escapeJson(subject) + "\","
+                + "\"text\":\"" + escapeJson(text) + "\""
+                + "}";
+
         try {
-            SimpleMailMessage message = new SimpleMailMessage();
+            HttpRequest request =
+                    HttpRequest.newBuilder()
+                            .uri(URI.create(
+                                    "https://api.resend.com/emails"
+                            ))
+                            .header(
+                                    "Authorization",
+                                    "Bearer " + resendApiKey
+                            )
+                            .header(
+                                    "Content-Type",
+                                    "application/json"
+                            )
+                            .POST(
+                                    HttpRequest.BodyPublishers
+                                            .ofString(json)
+                            )
+                            .build();
 
-            message.setFrom(System.getenv("MAIL_USERNAME"));
-            message.setTo(to);
-            message.setSubject(subject);
-            message.setText(text);
+            HttpResponse<String> response =
+                    httpClient.send(
+                            request,
+                            HttpResponse.BodyHandlers.ofString()
+                    );
 
-            mailSender.send(message);
+            if (response.statusCode() < 200
+                    || response.statusCode() >= 300) {
+
+                throw new RuntimeException(
+                        "Resend email failed. HTTP "
+                        + response.statusCode()
+                        + ": "
+                        + response.body()
+                );
+            }
 
         } catch (Exception e) {
             throw new RuntimeException(
-                    "Failed to send email through Gmail SMTP",
+                    "Failed to send email through Resend",
                     e
             );
         }
@@ -100,4 +144,13 @@ public class EmailService {
                 + "HomeFix Team"
         );
     }
+
+    private String escapeJson(String value) {
+        return value
+                .replace("\\", "\\\\")
+                .replace("\"", "\\\"")
+                .replace("\n", "\\n")
+                .replace("\r", "\\r");
+    }
 }
+
