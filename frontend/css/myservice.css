@@ -52,6 +52,10 @@ body {
     font-weight: bold;
 }
 
+img{
+    height: 60px;
+    width: 80px;
+}
 
 .logo h2 {
     font-size: 20px;

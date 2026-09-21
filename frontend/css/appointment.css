@@ -16,6 +16,11 @@ body {
    TOP HEADER
 ========================= */
 
+img{
+    height: 60px;
+    width: 80px;
+}
+
 .top-header {
     height: 75px;
 
