@@ -1,83 +1,32 @@
-
 package com.homefix.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
-
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 
 @Service
 public class EmailService {
 
-    private final HttpClient httpClient = HttpClient.newHttpClient();
+    @Autowired
+    private JavaMailSender mailSender;
 
-    private final String resendApiKey =
-            System.getenv("RESEND_API_KEY");
+    // =========================================
+    // COMMON EMAIL METHOD
+    // =========================================
 
     private void sendEmail(
             String to,
             String subject,
             String text) {
 
-        if (resendApiKey == null || resendApiKey.isBlank()) {
-            throw new RuntimeException(
-                    "RESEND_API_KEY is not configured"
-            );
-        }
+        SimpleMailMessage message = new SimpleMailMessage();
 
-        String json =
-                "{"
-                + "\"from\":\"HomeFix <onboarding@resend.dev>\","
-                + "\"to\":[\"" + escapeJson(to) + "\"],"
-                + "\"subject\":\"" + escapeJson(subject) + "\","
-                + "\"text\":\"" + escapeJson(text) + "\""
-                + "}";
+        message.setTo(to);
+        message.setSubject(subject);
+        message.setText(text);
 
-        try {
-            HttpRequest request =
-                    HttpRequest.newBuilder()
-                            .uri(URI.create(
-                                    "https://api.resend.com/emails"
-                            ))
-                            .header(
-                                    "Authorization",
-                                    "Bearer " + resendApiKey
-                            )
-                            .header(
-                                    "Content-Type",
-                                    "application/json"
-                            )
-                            .POST(
-                                    HttpRequest.BodyPublishers
-                                            .ofString(json)
-                            )
-                            .build();
-
-            HttpResponse<String> response =
-                    httpClient.send(
-                            request,
-                            HttpResponse.BodyHandlers.ofString()
-                    );
-
-            if (response.statusCode() < 200
-                    || response.statusCode() >= 300) {
-
-                throw new RuntimeException(
-                        "Resend email failed. HTTP "
-                        + response.statusCode()
-                        + ": "
-                        + response.body()
-                );
-            }
-
-        } catch (Exception e) {
-            throw new RuntimeException(
-                    "Failed to send email through Resend",
-                    e
-            );
-        }
+        mailSender.send(message);
     }
 
     // =========================================
@@ -144,13 +93,4 @@ public class EmailService {
                 + "HomeFix Team"
         );
     }
-
-    private String escapeJson(String value) {
-        return value
-                .replace("\\", "\\\\")
-                .replace("\"", "\\\"")
-                .replace("\n", "\\n")
-                .replace("\r", "\\r");
-    }
 }
-
