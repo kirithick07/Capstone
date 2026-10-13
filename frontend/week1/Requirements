@@ -1,0 +1,72 @@
+Software Requirements
+
+1. Functional Requirements
+
+Customer
+
+- Customer can register and login.
+- Customer can manage personal profile details.
+- Customer can add and manage home appliances.
+- Customer can create a maintenance/service request.
+- Customer can view service request status.
+- Customer can view previous service history.
+
+Technician
+
+- Technician can login into the system.
+- Technician can view assigned service requests.
+- Technician can view customer and appliance details.
+- Technician can update service status.
+- Technician can add service remarks.
+
+Admin
+
+- Admin can login into the system.
+- Admin can manage customers and technicians.
+- Admin can manage appliance categories.
+- Admin can view and manage service requests.
+- Admin can assign technicians to service requests.
+- Admin can monitor completed and pending services.
+
+2. Non-Functional Requirements
+
+Performance
+
+- The system should respond quickly to user requests.
+- The application should support multiple users.
+
+Security
+
+- User login details should be protected.
+- Only authorized users can access their features.
+
+Usability
+
+- The system should have a simple and user-friendly interface.
+- Users should easily navigate through the application.
+
+Reliability
+
+- Service data should be stored safely.
+- The system should maintain accurate service records.
+
+Maintainability
+
+- The application should have a modular structure.
+- Future features should be easy to add.
+
+3. Hardware Requirements
+
+- Computer/Laptop
+- Minimum 8GB RAM
+- Internet connection
+
+4. Software Requirements
+
+- Java
+- Spring Boot
+- MySQL
+- HTML, CSS, JavaScript
+- Maven
+- Git and GitHub
+- VS Code / IntelliJ IDEA
